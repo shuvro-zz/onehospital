@@ -1,0 +1,50 @@
+<div class="row" ng-repeat="test in reportTests">
+	<div class="col-sm-12">
+		<div class="test">
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<span class="title">Test Name: </span>
+						</td>
+						<td>
+							{{test.name}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="title">Test Date: </span>
+						</td>
+						<td>
+							{{test.created_at}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="title">Test Type: </span>
+						</td>
+						<td>
+							{{test.type}}
+						</td>
+					</tr>					
+					<tr>
+						<td>
+							<span class="title">Test Result: </span>
+						</td>
+						<td>
+							{{test.result}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="title">Test Comments: </span>
+						</td>
+						<td>
+							{{test.comments}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<div class="datagrid">
+	<table>
+		<thead>
+			<tr>
+				<th>Report Name</th>
+				<th>Number of Tests</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="test in patientReports" ng-class-even="'alt'" ng-class="isReportSelected(test.id)" ng-click="selectReport(test.id)">
+				<td>{{test.name}}</td>
+				<td>{{test.innerTests}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

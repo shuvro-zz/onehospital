@@ -1,0 +1,14 @@
+<form role="form">
+	<div class="item-group">
+		<label for="username">Username:</label>
+		<input type="text" name="username" class="form-control" ng-model="user.username">
+	</div>	
+	<div class="item-group">
+		<label for="password">Passcode:</label>
+		<input type="password" name="password" class="form-control" ng-model="user.password">
+	</div>
+	<div class="item-group">
+			<button
+			 type="button" class="btn btn-primary" ng-click="logIn()" style="position:relative;width: 120px;left:calc(50% - 60px);">Login</button>
+	</div>
+</form>

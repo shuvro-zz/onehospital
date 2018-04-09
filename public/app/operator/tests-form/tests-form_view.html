@@ -1,0 +1,39 @@
+<div class="centerForm">
+<form role="form" style="margin-top: 30px;" novalidate name="testsForm">
+	<div class="item-group">
+		<label for="name">Test Name</label>
+		<input type="text" class="form-control" name="name" ng-model="newTest.name" required ng-pattern="/^[A-Za-z ]+$/" ng-maxlength="55">
+		<div ng-show="testsForm.name.$invalid && (testsForm.name.$dirty || testsForm.name.$touched)" class="alert alert-warning"><strong>Required.</strong> Only letters. Max. 55 characters</div>
+	</div>
+	<div class="item-group">
+		<label for="date">Test Date</label>
+		<input type="text" class="form-control" name="date" ng-model="newTest.created_at" required ng-pattern="/^[0-9-]+$/" date-picker>
+		<div ng-show="testsForm.date.$invalid && (testsForm.date.$dirty || testsForm.date.$touched)" class="alert alert-warning"><strong>Required.</strong>Date</div>
+	</div>
+	<div class="item-group">
+		<label for="type">Test Type</label>
+		<select class="form-control" name="type" ng-model="newTest.type" required>
+			<option value="" selected></option>
+			<option value="Fluids" selected>Blood</option>
+			<option value="Stool" selected>Stool</option>
+			<option value="Urine" selected>Urine</option>
+			<option value="Tissue" selected>Tissue</option>
+		</select>
+		<div ng-show="testsForm.type.$invalid && (testsForm.type.$dirty || testsForm.type.$touched)" class="alert alert-warning"><strong>Required.</strong></div>
+	</div>
+	<div class="item-group">
+		<label for="result">Test Result</label>
+		<textarea required ng-maxlength="55" name="result" ng-model="newTest.result" class="form-control"></textarea>
+		<div ng-show="testsForm.result.$invalid && (testsForm.result.$dirty || testsForm.result.$touched)" class="alert alert-warning"><strong>Required.</strong> Numbers and letters. Max. 55 characters</div>
+	</div>
+	<div class="item-group">
+		<label for="comments">Test Comments</label>
+		<textarea name="comments" name="comments" ng-model="newTest.comments" class="form-control" ng-maxlength="55"></textarea>
+		<div ng-show="testsForm.comments.$invalid && (testsForm.comments.$dirty || testsForm.comments.$touched)" class="alert alert-warning"><strong>Required.</strong> Numbers and letters. Max. 55 characters</div>
+	</div>
+	<div class="item-group" ng-show="testsForm.$valid">
+		<button type="button" class="btn btn-primary" ng-click="createTest()" ng-show="formClass === 'create'">Create Test</button>
+		<button type="button" class="btn btn-primary" ng-click="modifyTest()" ng-show="formClass === 'modify'">Modify Test</button>
+	</div>
+</form>
+</div>

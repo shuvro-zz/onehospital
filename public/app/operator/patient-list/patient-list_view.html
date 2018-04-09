@@ -1,0 +1,16 @@
+<div class="datagrid">
+	<table>
+		<thead>
+			<tr>
+				<th>Patient Name</th>
+				<th># of Reports</th>				
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="patient in patientList" ng-class-even="'alt'" ng-class="isSelected(patient.id)" ng-click="changeSelection(patient)">
+				<td>{{patient.name}}</td>
+				<td>{{patient.reports}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

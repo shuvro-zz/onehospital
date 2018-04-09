@@ -1,0 +1,39 @@
+<div class="centerForm">
+<form role="form" style="margin-top: 30px;" novalidate name="patientForm">
+	<div class="item-group">
+		<label for="name">Full Name</label>
+		<input type="text" class="form-control" id="name" name="name" ng-model="selectedPatient.name" required ng-pattern="/^[A-Za-z ]+$/" ng-minlength="10" ng-maxlength="60">
+		<div ng-show="patientForm.name.$invalid && (patientForm.name.$dirty || patientForm.name.$touched)" class="alert alert-warning"><strong>Required.</strong> Only letters. Min. 10 characters. Max. 60 characters</div>
+	</div>
+	<div class="item-group">
+		<label for="email">E-Mail</label>
+		<input type="email" class="form-control" id="email" name="email" ng-model="selectedPatient.email" required>
+		<div ng-show="patientForm.email.$invalid && (patientForm.email.$dirty || patientForm.email.$touched)" class="alert alert-warning"><strong>Required.</strong> Valid email</div>
+	</div>
+	<div class="item-group">
+		<label for="password">password</label>
+		<input type="text" class="form-control" id="password" password ng-model="selectedPatient.password" placeholder="A new random passcode is automatically generated at each transaction only for patients" readonly>
+	</div>
+	<div class="item-group">
+		<label for="username">Username</label>
+		<input type="text" class="form-control" id="username" name="username" ng-model="selectedPatient.username" required ng-pattern="/^[A-Za-z0-9.]+$/" ng-minlength="5" ng-maxlength="15">
+		<div ng-show="patientForm.username.$invalid && (patientForm.username.$dirty || patientForm.username.$touched)" class="alert alert-warning"><strong>Required.</strong> Numbers and letters.  Min. 5 characters. Max. 15 characters</div>
+	</div>
+	<div class="item-group">
+		<label for="operator">Operator</label>
+		<input type="checkbox" class="form-control" id="operator" ng-model="selectedPatient.operator" ng-click="isOperator()">
+	</div>	
+	<div class="item-group" ng-show="patientForm.$valid">
+		<button type="button" class="btn btn-primary" ng-hide="activeUser()" ng-click="createPatient()">New Patient</button>
+		<button type="button" class="btn btn-primary" ng-show="activeUser()" ng-click="blankForm()">Blank Form</button>
+		<button type="button" class="btn btn-primary" ng-click="modifyPatient()" ng-show="activeUser()">Modify Patient</button>
+		<button type="button" class="btn btn-primary" ng-show="isReadyToDelete" ng-click="deletePatient()">Confirm Delete</button>
+		<button type="button" class="btn btn-primary" ng-hide="isReadyToDelete"  ng-show="activeUser()" ng-click="readyToDelete()">Delete Patient</button>
+	</div>
+	<div class="item-group" ng-show="activeUser()">		
+		<button type="button" class="btn btn-primary" ng-click="createNewTest()">Create Test</button>
+		<button type="button" class="btn btn-primary" ng-click="createReport()">Create Report</button>
+		<button type="button" class="btn btn-primary" ng-click="manageContent()" style="dislpay:none;">Manage</button>
+	</div>
+</form>
+</div>

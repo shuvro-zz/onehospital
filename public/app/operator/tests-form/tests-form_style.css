@@ -1,0 +1,19 @@
+tests-form {
+	position: absolute;
+	height: 100%;
+	width: 100%;	
+	background-color: rgba(153, 204, 221, 0.7);
+	z-index: 2;
+	display: none;
+}
+
+tests-form .centerForm{
+	position: absolute;
+	height: 480px;
+	width: 312px;
+	top: calc(50% - 240px);
+	left: calc(50% - 156px);
+	background-color: white;
+	border: 2px solid #004488;
+	padding: 7px;
+}

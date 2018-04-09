@@ -1,0 +1,15 @@
+processing-bar {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	border: 2px solid #004488;
+	z-index: 7;
+	top:calc(50% - 50px);
+	left: calc(50% - 50px);
+	background-color: #99ccdd;
+}
+
+processing-bar img {
+	height: 100%;
+	width: 100%;
+}

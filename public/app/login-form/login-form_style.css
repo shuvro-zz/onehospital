@@ -1,0 +1,7 @@
+login-form {
+	position: absolute;
+	height: 400px;
+	width: 312px;
+	top: 270px;
+	left: calc(50% - 156px);
+}
