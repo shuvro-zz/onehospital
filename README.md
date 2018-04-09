@@ -1,8 +1,8 @@
-# weborator
-A simple web application tool for building complex websites with complete GUI Interface and drag &amp; drop functionalities.
+# onehospital
+OneHospital is a simple cloud based application (SaaS) built to enable hospitals in Nigeria manage patient records and provide same from a central cloud storage.
 
 ### Usage
-Simple drag and drop tool to help non-techy users build websites within minutes easily from the click of a button to drag and drop visuals.
+By providing Hospitals, Clinics & Healthcare centers in Nigeria a cloud-based application, health centers can provide ready information to patients and doctos on the go.
 
 #### Back-end Development
 <ul>
